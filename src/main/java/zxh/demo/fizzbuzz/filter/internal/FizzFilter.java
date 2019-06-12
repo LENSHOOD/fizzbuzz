@@ -1,4 +1,6 @@
-package zxh.demo.fizzbuzz.filter;
+package zxh.demo.fizzbuzz.filter.internal;
+
+import zxh.demo.fizzbuzz.filter.AbstractFilter;
 
 import java.util.Objects;
 
@@ -7,12 +9,10 @@ import java.util.Objects;
  * @author zhangxuhai
  * @date 2019-06-12
 */
-public class FizzFilter extends AbstractFilter{
-
-    private AbstractFilter next;
+public class FizzFilter extends AbstractFilter {
 
     public FizzFilter(AbstractFilter next) {
-        this.next = next;
+        super(next);
     }
 
     @Override

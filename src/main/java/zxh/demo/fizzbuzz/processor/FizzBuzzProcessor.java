@@ -1,9 +1,9 @@
 package zxh.demo.fizzbuzz.processor;
 
 import zxh.demo.fizzbuzz.filter.AbstractFilter;
-import zxh.demo.fizzbuzz.filter.BuzzFilter;
-import zxh.demo.fizzbuzz.filter.FizzBuzzFilter;
-import zxh.demo.fizzbuzz.filter.FizzFilter;
+import zxh.demo.fizzbuzz.filter.internal.BuzzFilter;
+import zxh.demo.fizzbuzz.filter.internal.FizzBuzzFilter;
+import zxh.demo.fizzbuzz.filter.internal.FizzFilter;
 
 /**
  * FizzBuzzProcessor:
