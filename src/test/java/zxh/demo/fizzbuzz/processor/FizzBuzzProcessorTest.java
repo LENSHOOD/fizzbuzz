@@ -17,8 +17,8 @@ public class FizzBuzzProcessorTest {
         assertEquals("Fizz", fizzBuzzProcessor.doProcess("13"));
         assertEquals("14", fizzBuzzProcessor.doProcess("14"));
         assertEquals("FizzBuzz", fizzBuzzProcessor.doProcess("15"));
-        assertEquals("Fizz", fizzBuzzProcessor.doProcess("35"));
-        assertEquals("Fizz", fizzBuzzProcessor.doProcess("53"));
+        assertEquals("FizzBuzz", fizzBuzzProcessor.doProcess("35"));
+        assertEquals("FizzBuzz", fizzBuzzProcessor.doProcess("53"));
 
     }
 

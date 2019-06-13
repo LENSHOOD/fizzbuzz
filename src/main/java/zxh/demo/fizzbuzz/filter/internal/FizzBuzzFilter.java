@@ -17,9 +17,8 @@ public class FizzBuzzFilter extends AbstractFilter {
 
     @Override
     public String doFilter(String input) {
-        int inputInt = Integer.parseInt(input);
-
-        if (inputInt % 3 == 0 && inputInt % 5 == 0) {
+        if (!input.equals(new  FizzFilter(null).doFilter(input))
+                && !input.equals(new BuzzFilter(null).doFilter(input))) {
             return "FizzBuzz";
         }
 
