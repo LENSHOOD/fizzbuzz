@@ -12,18 +12,25 @@ public class MainProgram {
         private FizzBuzzFilter() {
         }
 
-        public static boolean isFizz(int input) {
-            return input % 3 == 0 || String.valueOf(input).contains("3");
-        }
-
-        public static boolean isBuzz(int input) {
-            return input % 5 == 0 || String.valueOf(input).contains("5");
-        }
-
         public static boolean isFizzBuzz(int input) {
             return isFizz(input) && isBuzz(input);
         }
 
+        public static boolean isFizz(int input) {
+            return isRemainderZero(input, 3) || isContains(input, "3");
+        }
+
+        public static boolean isBuzz(int input) {
+            return isRemainderZero(input, 5) || isContains(input, "5");
+        }
+
+        private static boolean isContains(int input, String s) {
+            return String.valueOf(input).contains(s);
+        }
+
+        private static boolean isRemainderZero(int input, int i) {
+            return input % i == 0;
+        }
     }
 
 
