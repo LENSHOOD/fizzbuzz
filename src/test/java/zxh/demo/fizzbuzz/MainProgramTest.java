@@ -7,42 +7,61 @@ import static org.junit.Assert.*;
 public class MainProgramTest {
 
     @Test
-    public void should_isFizz_return_true() {
-
-        assertTrue(MainProgram.FizzBuzzFilter.isFizz(3));
-        assertTrue(MainProgram.FizzBuzzFilter.isFizz(27));
-        assertTrue(MainProgram.FizzBuzzFilter.isFizz(13));
-        assertTrue(MainProgram.FizzBuzzFilter.isFizz(31));
-        assertFalse(MainProgram.FizzBuzzFilter.isFizz(4));
-        assertFalse(MainProgram.FizzBuzzFilter.isFizz(19));
+    public void should_isFizz_return_true_when_get_num_can_be_divided_by_3() {
+        assertTrue(MainProgram.isFizz(3));
+        assertTrue(MainProgram.isFizz(9));
+        assertTrue(MainProgram.isFizz(27));
+        assertFalse(MainProgram.isFizz(4));
+        assertFalse(MainProgram.isFizz(19));
     }
 
     @Test
-    public void should_isBuzz_return_true() {
-
-        assertTrue(MainProgram.FizzBuzzFilter.isBuzz(5));
-        assertTrue(MainProgram.FizzBuzzFilter.isBuzz(10));
-        assertTrue(MainProgram.FizzBuzzFilter.isBuzz(51));
-        assertTrue(MainProgram.FizzBuzzFilter.isBuzz(59));
-        assertFalse(MainProgram.FizzBuzzFilter.isBuzz(4));
-        assertFalse(MainProgram.FizzBuzzFilter.isBuzz(19));
+    public void should_isFizz_return_true_when_num_has_3() {
+        assertTrue(MainProgram.isFizz(3));
+        assertTrue(MainProgram.isFizz(13));
+        assertTrue(MainProgram.isFizz(31));
+        assertFalse(MainProgram.isFizz(4));
+        assertFalse(MainProgram.isFizz(19));
     }
 
     @Test
-    public void should_isFizzBuzz_return_true() {
-
-        assertTrue(MainProgram.FizzBuzzFilter.isFizzBuzz(15));
-        assertTrue(MainProgram.FizzBuzzFilter.isFizzBuzz(30));
-        assertTrue(MainProgram.FizzBuzzFilter.isFizzBuzz(35));
-        assertTrue(MainProgram.FizzBuzzFilter.isFizzBuzz(53));
-        assertFalse(MainProgram.FizzBuzzFilter.isFizzBuzz(4));
-        assertFalse(MainProgram.FizzBuzzFilter.isFizzBuzz(19));
+    public void should_isBuzz_return_true_when_get_num_can_be_divided_by_5() {
+        assertTrue(MainProgram.isBuzz(5));
+        assertTrue(MainProgram.isBuzz(10));
+        assertTrue(MainProgram.isBuzz(15));
+        assertFalse(MainProgram.isBuzz(4));
+        assertFalse(MainProgram.isBuzz(19));
     }
 
     @Test
-    public void process() {
+    public void should_isBuzz_return_true_when_num_has_5() {
+        assertTrue(MainProgram.isBuzz(5));
+        assertTrue(MainProgram.isBuzz(51));
+        assertTrue(MainProgram.isBuzz(54));
+        assertFalse(MainProgram.isBuzz(4));
+        assertFalse(MainProgram.isBuzz(19));
+    }
 
-        String expectedOneTwenty = "1\n" +
+    @Test
+    public void should_isFizzBuzz_return_true_when_get_num_can_be_divided_by_3_and_5() {
+        assertTrue(MainProgram.isFizzBuzz(15));
+        assertTrue(MainProgram.isFizzBuzz(30));
+        assertTrue(MainProgram.isFizzBuzz(45));
+        assertFalse(MainProgram.isFizzBuzz(4));
+        assertFalse(MainProgram.isFizzBuzz(19));
+    }
+
+    @Test
+    public void should_isFizzBuzz_return_true_when_num_has_3_and_5() {
+        assertTrue(MainProgram.isFizzBuzz(35));
+        assertTrue(MainProgram.isFizzBuzz(53));
+        assertFalse(MainProgram.isFizzBuzz(4));
+        assertFalse(MainProgram.isFizzBuzz(19));
+    }
+
+    @Test
+    public void doProcessTest() {
+        String expectedString = "1\n" +
                 "2\n" +
                 "Fizz\n" +
                 "4\n" +
@@ -63,7 +82,7 @@ public class MainProgramTest {
                 "19\n" +
                 "Buzz\n";
 
-        assertEquals(expectedOneTwenty, new MainProgram().process(1, 20 ,1));
-
+        assertEquals(expectedString, new MainProgram().doProcess(1, 20, 1));
     }
+
 }
