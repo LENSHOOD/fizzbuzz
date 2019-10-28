@@ -9,40 +9,12 @@ import java.util.stream.IntStream;
 */
 public class FizzBuzzMain {
 
-    public String calculate(int i) {
-        if (isFizzBuzz(i)) {
-            return "FizzBuzz";
-        }
-
-        if (isFizz(i)) {
-            return "Fizz";
-        }
-
-        if (isBuzz(i)) {
-            return "Buzz";
-        }
-
-        return String.valueOf(i);
-    }
-
-    private boolean isFizzBuzz(int i) {
-        return isFizz(i) && isBuzz(i);
-    }
-
-    private boolean isBuzz(int i) {
-        return i % 5 == 0;
-    }
-
-    private boolean isFizz(int i) {
-        return i % 3 == 0;
-    }
-
     public String input(int from, int to) {
         validateUserInput(from, to);
 
         StringBuilder result = new StringBuilder();
         IntStream.range(from, to + 1).forEach(
-                i -> result.append(calculate(i)).append(" ")
+                i -> result.append(FizzBuzzNumber.create(i).say()).append(" ")
         );
 
         return result.toString();
