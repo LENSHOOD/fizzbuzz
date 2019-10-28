@@ -34,4 +34,18 @@ public class FizzBuzzMain {
     private boolean isFizz(int i) {
         return i % 3 == 0;
     }
+
+    public void input(int from, int to) {
+        if (from <= 0 || to <= 0) {
+            throw new IllegalArgumentException("Input range cannot be negative.");
+        }
+
+        if (from >= to) {
+            throw new IllegalArgumentException("Illegal range.");
+        }
+
+        if (to > 999) {
+            throw new IllegalArgumentException("Cannot greater than 999");
+        }
+    }
 }
