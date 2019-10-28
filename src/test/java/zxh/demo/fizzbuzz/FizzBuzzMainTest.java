@@ -90,4 +90,12 @@ public class FizzBuzzMainTest {
         expectedException.expect(IllegalArgumentException.class);
         fizzBuzzMain.input(1, 1000);
     }
+
+    @Test
+    public void validate_user_input_1_to_20() {
+        String expectReturn = "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz ";
+
+        FizzBuzzMain fizzBuzzMain = new FizzBuzzMain();
+        assertEquals(expectReturn, fizzBuzzMain.input(1, 20));
+    }
 }

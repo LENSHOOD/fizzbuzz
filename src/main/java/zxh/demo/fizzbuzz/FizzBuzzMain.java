@@ -1,5 +1,7 @@
 package zxh.demo.fizzbuzz;
 
+import java.util.stream.IntStream;
+
 /**
  * FizzBuzzMain:
  * @author zhangxuhai
@@ -35,8 +37,15 @@ public class FizzBuzzMain {
         return i % 3 == 0;
     }
 
-    public void input(int from, int to) {
+    public String input(int from, int to) {
         validateUserInput(from, to);
+
+        StringBuilder result = new StringBuilder();
+        IntStream.range(from, to + 1).forEach(
+                i -> result.append(calculate(i)).append(" ")
+        );
+
+        return result.toString();
     }
 
     private void validateUserInput(int from, int to) {
