@@ -36,6 +36,10 @@ public class FizzBuzzMain {
     }
 
     public void input(int from, int to) {
+        validateUserInput(from, to);
+    }
+
+    private void validateUserInput(int from, int to) {
         if (from <= 0 || to <= 0) {
             throw new IllegalArgumentException("Input range cannot be negative.");
         }
