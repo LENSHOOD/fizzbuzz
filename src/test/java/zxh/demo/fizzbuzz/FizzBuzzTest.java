@@ -13,49 +13,41 @@ public class FizzBuzzTest {
     
     @Test
     public void should_return_fizz_when_input_3() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("Fizz", fizzBuzz.calculate(3));
+        assertEquals("Fizz", FizzBuzz.calculate(3));
     }
 
     @Test
     public void should_return_fizz_when_input_48() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("Fizz", fizzBuzz.calculate(48));
+        assertEquals("Fizz", FizzBuzz.calculate(48));
     }
     
     @Test
     public void should_return_buzz_when_input_5() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("Buzz", fizzBuzz.calculate(5));
+        assertEquals("Buzz", FizzBuzz.calculate(5));
     }
 
     @Test
     public void should_return_buzz_when_input_55() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("Buzz", fizzBuzz.calculate(55));
+        assertEquals("Buzz", FizzBuzz.calculate(55));
     }
 
     @Test
     public void should_return_fizzbuzz_when_input_15() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("FizzBuzz", fizzBuzz.calculate(15));
+        assertEquals("FizzBuzz", FizzBuzz.calculate(15));
     }
 
     @Test
     public void should_return_fizzbuzz_when_input_60() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("FizzBuzz", fizzBuzz.calculate(60));
+        assertEquals("FizzBuzz", FizzBuzz.calculate(60));
     }
 
     @Test
     public void should_return_1_when_input_1() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("1", fizzBuzz.calculate(1));
+        assertEquals("1", FizzBuzz.calculate(1));
     }
 
     @Test
     public void should_return_88_when_input_88() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("88", fizzBuzz.calculate(88));
+        assertEquals("88", FizzBuzz.calculate(88));
     }
 }

@@ -27,7 +27,6 @@ public class ProcessFizzBuzz {
     }
 
     String calculateFizzBuzz(int i) {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        return fizzBuzz.calculate(i);
+        return FizzBuzz.calculate(i);
     }
 }

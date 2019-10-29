@@ -7,7 +7,7 @@ package zxh.demo.fizzbuzz;
 */
 public class FizzBuzz {
 
-    public String calculate(int i) {
+    public static String calculate(int i) {
 
         if (isFizzBuzz(i)) {
             return "FizzBuzz";
@@ -24,15 +24,15 @@ public class FizzBuzz {
         return String.valueOf(i);
     }
 
-    private boolean isFizzBuzz(int i) {
+    private static boolean isFizzBuzz(int i) {
         return isFizz(i) && isBuzz(i);
     }
 
-    private boolean isBuzz(int i) {
+    private static boolean isBuzz(int i) {
         return i % 5 == 0;
     }
 
-    private boolean isFizz(int i) {
+    private static boolean isFizz(int i) {
         return i % 3 == 0;
     }
 }
