@@ -19,6 +19,8 @@ public class FizzBuzz {
 
         StringBuilder result = new StringBuilder();
         IntStream.range(from, to + 1).forEach(i -> result.append(calculate(i)).append(" "));
+
+        System.out.println(result);
         return result.toString();
     }
 
