@@ -17,14 +17,32 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void should_input_27_get_fizz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("Fizz", fizzBuzz.calculate(27));
+    }
+
+    @Test
     public void should_input_5_get_Buzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("Buzz", fizzBuzz.calculate(5));
     }
 
     @Test
+    public void should_input_65_get_Buzz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("Buzz", fizzBuzz.calculate(65));
+    }
+
+    @Test
     public void should_input_15_get_fizzbuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("FizzBuzz", fizzBuzz.calculate(15));
+    }
+
+    @Test
+    public void should_input_90_get_fizzbuzz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("FizzBuzz", fizzBuzz.calculate(90));
     }
 }
