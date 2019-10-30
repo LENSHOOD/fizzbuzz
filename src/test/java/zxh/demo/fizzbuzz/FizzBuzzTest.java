@@ -45,4 +45,16 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("FizzBuzz", fizzBuzz.calculate(90));
     }
+
+    @Test
+    public void should_input_7_get_7() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("7", fizzBuzz.calculate(7));
+    }
+
+    @Test
+    public void should_input_134_get_134() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("134", fizzBuzz.calculate(134));
+    }
 }

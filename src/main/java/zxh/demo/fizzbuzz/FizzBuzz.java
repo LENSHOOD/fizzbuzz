@@ -20,6 +20,6 @@ public class FizzBuzz {
             return "Buzz";
         }
 
-        return null;
+        return String.valueOf(i);
     }
 }
