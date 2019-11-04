@@ -10,8 +10,12 @@ import java.util.stream.IntStream;
  * @date 2019/11/4
 */
 public class FizzBuzz {
+
+    private static final int MIN = 1;
+    private static final int MAX = 100;
+
     public String process(int from, int to) {
-        if (from < 1 || to > 100) {
+        if (from < MIN || to > MAX) {
             throw new FizzBuzzException("Invalid input range!");
         }
 
