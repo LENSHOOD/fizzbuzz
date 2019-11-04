@@ -7,18 +7,30 @@ package zxh.demo.fizzbuzz;
 */
 public class FizzBuzz {
     public String calculate(int i) {
-        if (i % 3 == 0 && i % 5 == 0) {
+        if (isFizzBuzz(i)) {
             return "FizzBuzz";
         }
 
-        if (i % 3 == 0) {
+        if (isFizz(i)) {
             return "Fizz";
         }
 
-        if (i % 5 == 0) {
+        if (isBuzz(i)) {
             return "Buzz";
         }
 
         return String.valueOf(i);
+    }
+
+    private boolean isFizzBuzz(int i) {
+        return isFizz(i) && isBuzz(i);
+    }
+
+    private boolean isBuzz(int i) {
+        return i % 5 == 0;
+    }
+
+    private boolean isFizz(int i) {
+        return i % 3 == 0;
     }
 }
